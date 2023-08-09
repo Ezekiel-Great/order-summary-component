@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+:root{
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+.main{
+    max-width: 30%;
+    border-radius: 20px;
+    background-color: white;
+}
+.main #img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 20px;
+}
+.container h1{
+    font-weight: 900;
+    color: var(--Dark-blue);
+    font-size: 2.5rem;
+}
+.container p{
+    text-align: center;
+    max-width: 75%;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--Desaturated-blue);
+}
+.container section{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--Very-pale-blue);
+    border-radius: 8px;
+    align-content: center;
+}
+section .plan{
+    display: flex;
+    gap: 8px;
+}
+
+.plan .annual{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.plan .annual h1{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.plan .annual span{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--Desaturated-blue);
+}
+section a{
+    color: var(--Bright-blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+a:hover{
+    cursor: pointer;
+    color:  hsla(245, 75%, 52%,0.75);
+    text-decoration: none;
+}
+button#proceed{ 
+    color: var(--Very-pale-blue);
+    background: var(--Bright-blue);
+    border-style: none;
+    border-radius: 16px;
+    width: 80%;
+    height: 55px;
+    box-shadow:0px 15px 10px rgb(223, 223, 223) ;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+#proceed:hover{
+    cursor: pointer;
+    background-color: hsla(245, 75%, 52%,0.75);
+    box-shadow:0px 25px 10px rgb(223, 223, 223) ;
+}
+.cancel{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    margin-bottom: 24px;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+.cancel:hover{
+    cursor: pointer;
+    color: var(--Dark-blue);
+}
+
+@media(600px <= width <= 900px){
+    .main{
+        max-width: 50%;
+    }
+}
+@media (max-width:600px){
+   .main{
+        max-width: 90%;
+    }
+    
+    .container section, button#proceed{
+        width: 85%;
+    }
+   .container p{
+        max-width: 75.5% ;
+   }
+ 
+}
